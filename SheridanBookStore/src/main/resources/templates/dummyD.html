@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" type="text/css" media="all"
+ href="../static/css/css.css"th:href="@{/css/css.css}" />
+<meta charset="ISO-8859-1">
+<title>Dummy Records</title>
+</head>
+<body id="bo">
+<center>
+<h1 id="u">Davis Campus</h1>
+<h1>Dummy Records</h1>
+<table>
+<tr>
+	<th>Title</th>
+	<th>Author</th>
+	<th>Price</th>
+	<th>Qty</th>
+	<th>Related Courses</th>
+</tr>
+	<tr th:each="DummyD : ${DummyD}">
+	
+	<td th:text="${DummyD.title}"></td>
+	<td th:text="${DummyD.author}"></td>
+	<td th:text="${DummyD.price}"></td>
+	<td th:text="${DummyD.qty}"></td>
+	<td th:text="${DummyD.relatedCourses}"></td>
+	</tr>
+</table>
+</center>
+</body>
+</html>

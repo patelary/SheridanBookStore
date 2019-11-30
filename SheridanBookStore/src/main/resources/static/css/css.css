@@ -1,0 +1,61 @@
+@ch@charset "ISO-8859-1";
+#bo{
+font-family: cursive;
+background-color: green;
+}
+table {
+  border-collapse: collapse;
+  width: 50%;
+  font-size: 21px;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border: 2px solid white;
+}
+#h
+{
+	font-family: cursive;
+	color:white;
+	font-size:50px;
+	text-shadow: 4px 8px 10px blue;
+}
+#u
+{
+	background-color: black;
+	color:white;
+	font-size: 50px;
+}
+#i
+{
+	background-image: url("../../images/Stacks.jpg");
+}
+#z
+{
+	color:white;
+}
+a:link
+   {
+   color:white;
+   background:transparent;
+   text-decoration:none;
+   }
+a:visited
+   {
+   color:red;
+   background:transparent;
+   text-decoration:none;
+   }
+a:hover
+   {
+   color:yellow;
+   background:transparent;
+   text-decoration:underline;
+   }
+a:active
+   {
+   color:white;
+   background:transparent;
+   text-decoration:underline;
+   }

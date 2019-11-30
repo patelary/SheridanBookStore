@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" type="text/css" media="all"
+ href="../static/css/css.css"th:href="@{/css/css.css}"/>
+<meta charset="ISO-8859-1">
+<title>Dummy Records</title>
+</head>
+<body id="bo">
+</br></br></br>
+<center>
+<h1 id="u">Trafalgar Campus</h1>
+<h1>Dummy Records</h1>
+<table>
+<tr>
+	<th>Title</th>
+	<th>Author</th>
+	<th>Price</th>
+	<th>Qty</th>
+	<th>Related Courses</th>
+</tr>
+	<tr th:each="DummyT : ${DummyT}">
+	
+	<td th:text="${DummyT.title}"></td>
+	<td th:text="${DummyT.author}"></td>
+	<td th:text="${DummyT.price}"></td>
+	<td th:text="${DummyT.qty}"></td>
+	<td th:text="${DummyT.relatedCourses}"></td>
+	</tr>
+</table>
+</center>
+</body>
+</html>

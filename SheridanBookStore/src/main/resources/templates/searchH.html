@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+  <link rel="stylesheet" type="text/css" media="all"
+ href="../static/css/css.css" th:href="@{/css/css.css}" />
+<meta charset="ISO-8859-1">
+<title>Search</title>
+</head>
+<body id="bo">
+<center>
+<h1 id="h">Search your books</h1><br><hr>
+<table>
+<tr>
+	<td>Search by Id</td>
+	<form action="searchIdH" method="get">
+	<td><input type="text" name="id"/></td>
+	<td><input type="submit" value="Submit"></td>
+    </form>
+    
+</tr>
+<tr>
+	<td>Search by Title</td>
+	<form action="searchTitleH" method="get">
+	<td><input type="text" name="title"  ></td>
+	<td><input type="submit" value="Submit"></td>
+    </form>
+</tr>
+<tr>
+	<td>Search by Author</td>
+	<form action="searchAuthorH" method="get">
+	<td><input type="text" name="author"></td> 
+	<td><input type="submit" value="Submit"></td>
+    </form>
+</tr>
+<tr>
+	<td>Search by Quantity</td>
+	<form action="searchQtyH" method="get">
+	<td><input type="text" name="qty"  ></td>
+	<td><input type="submit" value="Submit"></td>
+    </form>
+</tr>
+<tr>
+	<td>Search by Releted Course</td>
+	<form action="searchRelatedCoursesH" method="get">
+	<td><input type="text" name="relatedCourses" ></td>
+	<td><input type="submit" value="Submit"></td>
+    </form>
+</tr>
+</table><hr><br>
+<table>
+<tr>
+	<th>Id</th>
+ 	<th>Title</th>
+	<th>Author</th>
+	<th>Price</th>
+	<th>Quantity</th>
+	<th>Related Courses</th>
+</tr>
+<tr>
+	<tr th:each="search : ${search}">
+	<td th:text="${search.id}">as</td>
+	<td th:text="${search.title}">as</td>
+	<td th:text="${search.author}">as</td>
+	<td th:text="${search.price}">as</td>
+	<td th:text="${search.qty}">as</td>
+	<td th:text="${search.relatedCourses}">as</td>	 
+</tr>
+</table><hr align="center" width="50%"><br><br>
+<a href="/">Home Page</a>
+</center>
+</body>
+</html>
